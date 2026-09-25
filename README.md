@@ -79,15 +79,14 @@ which is consumed by this application.
 
         dmesg | grep pci_sensors
 
-2. *Create a virtual CAN interface* In a separate terminal
+2. *Create a virtual CAN interface* 
 
         sudo modprobe vcan
- 
         sudo ip link add dev vcan0 type vcan
- 
         sudo ip link set up vcan0
-``
+
     *Verify:*
+
 
         ip link show vcan0
 
@@ -105,13 +104,10 @@ Start the multiplexer:  ./net_pci_sensors.o
 
 **Example output:**
 
-
-epoll CAN+TCP multiplexer running...
- 
-Sensor: temp=101 pressure=202 status=0
-Sensor: temp=102 pressure=204 status=0
-Sensor: temp=103 pressure=206 status=0
-``
+    epoll CAN+TCP multiplexer running... 
+    Sensor: temp=101 pressure=202 status=0
+    Sensor: temp=102 pressure=204 status=0
+    Sensor: temp=103 pressure=206 status=0
 
 **Data Flow**
 
