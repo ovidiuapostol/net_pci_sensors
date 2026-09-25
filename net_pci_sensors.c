@@ -162,9 +162,6 @@ static int open_tcp_socket(const char *ip, int port)
  *      - returns number of ready FDs
  *      - fills events[] array with details
  *
- *  Why events[8]?
- *      epoll may return multiple ready FDs at once.
- *      8 is just a safe upper bound.
  ***************************************************************/
 int main(void)
 {
