@@ -36,6 +36,7 @@ Architecture
 +---------+ +---------+
 ```
 **Features**
+
     Reads sensor data from /dev/pci_sensors
     Uses epoll() for efficient event multiplexing
     Sends sensor values as CAN frames
